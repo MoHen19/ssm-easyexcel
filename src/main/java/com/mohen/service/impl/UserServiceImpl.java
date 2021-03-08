@@ -1,13 +1,16 @@
-package com.springboot.ssm.service.impl;
+package com.mohen.service.impl;
 
-import com.springboot.ssm.domain.User;
-import com.springboot.ssm.mapper.UserMapper;
-import com.springboot.ssm.service.UserService;
+import com.mohen.mapper.UserMapper;
+import com.mohen.service.UserService;
+import com.mohen.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author MH19
+ */
 @Service
 public class UserServiceImpl implements UserService {
 

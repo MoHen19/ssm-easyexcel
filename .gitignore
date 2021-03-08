@@ -32,4 +32,5 @@ mvnw.cmd
 build/
 
 ### VS Code ###
+
 .vscode/
