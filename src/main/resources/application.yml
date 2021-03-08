@@ -1,7 +1,8 @@
 #服务器配置
 server:
   port: 8080
-
+  tomcat:
+    uri-encoding: utf-8
 
 spring:
   #数据源
@@ -26,3 +27,7 @@ mybatis:
 logging:
   level:
     com.springboot.ssm.mapper: debug # 显示执行sql
+
+# Excel存放位置
+excel:
+  path: D://

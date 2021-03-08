@@ -22,4 +22,8 @@ public class UserServiceImpl implements UserService {
         return userMapper.getAll();
     }
 
+    @Override
+    public void saveBatch(List<User> list) {
+        userMapper.saveBatch(list);
+    }
 }
