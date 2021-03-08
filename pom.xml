@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.springboot</groupId>
-    <artifactId>springboot2.x_ssm</artifactId>
+    <artifactId>ssm-easyexcel</artifactId>
     <version>1.0.0</version>
     <description>Spring Boot2.x 搭建 SSM 项目</description>
 
@@ -25,11 +25,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!--对于HTML页面要添加thymeleaf的相关依赖才能正确跳转-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -41,6 +43,7 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.0</version>
         </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -51,14 +54,14 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
-            <version>2.0.5</version>
+            <version>2.2.6</version>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -66,12 +69,14 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
         <!-- 支持 @ConfigurationProperties 注解 读取properties或yml配置文件中的值 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

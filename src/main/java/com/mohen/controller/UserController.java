@@ -1,10 +1,10 @@
-package com.springboot.ssm.controller;
+package com.mohen.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.springboot.ssm.domain.User;
-import com.springboot.ssm.listener.UserDataListener;
-import com.springboot.ssm.service.UserService;
-import com.springboot.ssm.util.ExcelUtils;
+import com.mohen.service.UserService;
+import com.mohen.util.ExcelUtils;
+import com.mohen.domain.User;
+import com.mohen.listener.UserDataListener;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,12 +16,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * @author MH19
+ */
 @Slf4j
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-    // 在application.yml中配置
+    /**
+     * 在application.yml中配置
+     */
     @Value("${excel.path}")
     private String path;
 
@@ -39,7 +44,10 @@ public class UserController {
         return userService.getAll();
     }
 
-    // easyexcel导出Excel到指定位置
+    /**
+     * easyexcel导出Excel到指定位置
+     * @return
+     */
     @GetMapping("/export2File")
     @ResponseBody
     public String export2File() {
@@ -47,7 +55,10 @@ public class UserController {
         return "导出成功";
     }
 
-    // easyexcel导出Excel到web
+    /**
+     * easyexcel导出Excel到web
+     * @param response
+     */
     @GetMapping("/export2Web")
     public void export2Web(HttpServletResponse response) {
         try {
@@ -57,7 +68,12 @@ public class UserController {
         }
     }
 
-    // 将指定位置指定名称的Excel导出到web
+    /**
+     * 将指定位置指定名称的Excel导出到web
+     * @param response
+     * @param excelName
+     * @return
+     */
     @GetMapping("/export2Web4File/{excelName}")
     @ResponseBody
     public String export2Web4File(HttpServletResponse response, @PathVariable String excelName) {
@@ -70,7 +86,10 @@ public class UserController {
         return "文件导出失败";
     }
 
-    // easyexcel读取文件
+    /**
+     * easyexcel读取文件
+     * @return
+     */
     @GetMapping("/read4File")
     @ResponseBody
     public String read4File() {
@@ -79,13 +98,21 @@ public class UserController {
         return "读取成功";
     }
 
-    // 跳转到上传页面
+    /**
+     * 跳转到上传页面
+     * @return
+     */
     @RequestMapping("/toUploadPage")
     public String toUploadPage() {
         return "user/upload";
     }
 
-    // easyexcel上传文件
+    /**
+     * easyexcel上传文件
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @PostMapping("/upload")
     @ResponseBody
     public String upload(MultipartFile file) throws IOException {

@@ -1,4 +1,4 @@
-package com.springboot.ssm.util;
+package com.mohen.util;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.support.ExcelTypeEnum;
@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Excel工具类
+ * @author MH19
  */
 @Slf4j
 public class ExcelUtils {

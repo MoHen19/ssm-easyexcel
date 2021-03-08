@@ -1,20 +1,23 @@
-package com.springboot.ssm.listener;
+package com.mohen.listener;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.fastjson.JSON;
-import com.springboot.ssm.domain.User;
-import com.springboot.ssm.service.UserService;
+import com.mohen.service.UserService;
+import com.mohen.domain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author MH19
+ */
 @Slf4j
 public class UserDataListener extends AnalysisEventListener<User> {
 
-    private UserService userService;
+    private final UserService userService;
 
     public UserDataListener(UserService userService) {
         this.userService = userService;
